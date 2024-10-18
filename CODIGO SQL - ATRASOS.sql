@@ -1,10 +1,13 @@
-CODIGO SQL - ATRASOS
+--Codigo SQL para analisar os atrasos da base de titulos e ver os volumes por atraso:
 
+--CTE para tratamentos das datas:
 with tb_titulo as 
 (select tt.id_revendedor, tt.vlr_pedido ,tt.forma_pagamento,
 strftime('%Y-%m-%d', substr(dt_vencimento , 7, 4) || '-' || substr(dt_vencimento, 4, 2) || '-' || substr(dt_vencimento, 1, 2)) AS dt_vencimento,
 strftime('%Y-%m-%d', substr(dt_pagamento , 7, 4) || '-' || substr(dt_pagamento , 4, 2) || '-' || substr(dt_pagamento , 1, 2)) AS dt_pagamento
 from tb_titulos tt)
+
+--Codigo analisando os dados, utilizando julianday, pois utilizei o dbeaver:
 SELECT tr.nm_revendedor ,
 (SELECT MAX(julianday((dt_pagamento)) - julianday((dt_vencimento)))
 FROM tb_titulo
