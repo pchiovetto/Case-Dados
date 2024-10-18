@@ -1,14 +1,16 @@
-
-
 -- CTES
 with 
 DADOS_GCP AS (SELECT * FROM application_record_gcp) , 
 DADOS_ONPRIMECE AS (SELECT * FROM application_record_local) 
--- Pegar dados não inseridos no GCP
+  
+-- Insert para pegar IDS não registrados no GCP e tentar dar o novo insert:
 insert into application_record_gcp
 SELECT * FROM DADOS_ONPRIMECE ONP 
 WHERE NOT EXISTS (SELECT 1 FROM DADOS_GCP GCP WHERE ONP.ID=GCP.ID) ;
--- Jon avaliando difereça de valores entre as tabelas:
+
+COMMIT;
+
+-- Join entre as tabelas, avaliando difereça de valores entre as colunas e diferença nos dados:
 SELECT 
 A.TABELA, 
 A.CODE_GENDER, 
