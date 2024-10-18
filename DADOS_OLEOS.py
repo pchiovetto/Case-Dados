@@ -1,4 +1,6 @@
-Python:
+#Codigo python para analisar os arquivos de oleos:
+#Efetuar os filtros necessarios:
+#Criar um novo dataset que pode ser ingerido no GCP:
 
 import pandas as pd
 
