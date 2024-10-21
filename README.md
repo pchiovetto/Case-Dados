@@ -50,6 +50,3 @@ SG_UF_NCM igual a 'SP' (São Paulo)
 Agrupamento e Agregação: Agrupa os dados filtrados pelos campos CO_ANO e CO_MES, somando várias colunas de interesse (QT_ESTAT, KG_LIQUIDO, VL_FOB, VL_FRETE, VL_SEGURO).
 
 Exibição dos Resultados: Mostra o DataFrame agrupado resultante.
-
-Contribuições
-Contribuições são bem-vindas!
