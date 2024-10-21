@@ -1,4 +1,5 @@
 Análise de Dados
+
 Este repositório contém scripts para analisar diferentes conjuntos de dados: atrasos de títulos, registros de aplicação e dados de óleos. Cada código está dividido em seções que explicam sua funcionalidade.
 
 ####1. Código: DADOS_ATRASO.sql
