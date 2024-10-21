@@ -19,6 +19,7 @@ QTD_TITULOS_BOLETO_3M: A quantidade de títulos que foram pagos através de bole
 Codigo:DADOS_ATRASO.sql
 
 Análise de Registros de Aplicação
+
 Este repositório contém um script SQL para sincronizar registros entre duas fontes de dados (GCP e On-Premise) e comparar suas informações. O objetivo é identificar registros não registrados no GCP e avaliar as diferenças nos dados entre as duas tabelas.
 
 Descrição do Código
@@ -36,4 +37,24 @@ Realizei um JOIN entre as duas tabelas, agrupando e somando as quantidades de re
 A consulta gera uma comparação das quantidades de registros para cada tabela, permitindo uma análise detalhada das diferenças.
 
 Codigo:DADOS_OLEOS.py
+
+Análise de Dados de Óleos
+Este repositório contém um script Python que realiza a análise de arquivos CSV relacionados a importações de óleos, filtrando e agrupando dados relevantes para posterior ingestão no Google Cloud Platform (GCP).
+
+Descrição do Código
+O código executa as seguintes etapas:
+
+Leitura dos Arquivos CSV: Carrega os dados dos arquivos IMP_2023.csv e IMP_2024.csv, utilizando pandas.
+
+Unificação dos DataFrames: Combina os dados de ambos os anos em um único DataFrame.
+
+Filtragem dos Dados: Aplica filtros para selecionar registros específicos, considerando:
+
+CO_PAIS igual a 275 (Brasil)
+CO_VIA igual a 1 (aérea)
+CO_NCM igual a 33030010 (código NCM específico)
+SG_UF_NCM igual a 'SP' (São Paulo)
+Agrupamento e Agregação: Agrupa os dados filtrados pelos campos CO_ANO e CO_MES, somando várias colunas de interesse (QT_ESTAT, KG_LIQUIDO, VL_FOB, VL_FRETE, VL_SEGURO).
+
+Exibição dos Resultados: Mostra o DataFrame agrupado resultante.
 
