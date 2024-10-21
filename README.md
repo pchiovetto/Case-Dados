@@ -1,4 +1,4 @@
-Codigo:DADOS_ATRASO.sql
+#####Codigo:DADOS_ATRASO.sql
 
 Análise de atrasos dos titulos.
 
@@ -16,7 +16,7 @@ TOTAL_FATURADO_3M: O total faturado nos últimos 90 dias, considerando apenas os
 
 QTD_TITULOS_BOLETO_3M: A quantidade de títulos que foram pagos através de boleto a prazo nos últimos 90 dias.
 
-Codigo:DADOS_ATRASO.sql
+#####Codigo:DADOS_ATRASO.sql
 
 Análise de Registros de Aplicação
 
@@ -36,7 +36,7 @@ Com relacionamentos entre as tabelas via ID e not exists, foram identificados os
 Realizei um JOIN entre as duas tabelas, agrupando e somando as quantidades de registros de acordo com CODE_GENDER e FLAG_OWN_CAR.
 A consulta gera uma comparação das quantidades de registros para cada tabela, permitindo uma análise detalhada das diferenças.
 
-Codigo:DADOS_OLEOS.py
+#####Codigo:DADOS_OLEOS.py
 
 Análise de Dados de Óleos
 Este repositório contém um script Python que realiza a análise de arquivos CSV relacionados a importações de óleos, filtrando e agrupando dados relevantes para posterior ingestão no Google Cloud Platform (GCP).
